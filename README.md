@@ -1,24 +1,16 @@
+# React + Vite
 
-<a href="https://www.youtube.com/watch?v=vXHDfrFMoog&list=PL67b5wgxuUtAzzyFFMZ8W3w_XV4jJfH-8" target="_blank">
-  <img src="./thumbnail.png" alt="Thumbnail"/>
-</a>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-## Description:
-## Want to build a modern, interactive 3D website using React, TailwindCSS, and Spline? In this step-by-step tutorial, I'll show you how to integrate a 3D model into your website for a sleek, immersive experience! 🌐✨
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🔥 What You’ll Learn:
-## ✅ How to create and customize 3D models in Spline
-## ✅ How to embed 3D models in a website 
-## ✅ Adding smooth animations & interactivity
-## ✅ Creating a responsive and modern 3D landing page
-## ✅ Best practices for performance optimization
+## React Compiler
 
-## This tutorial is perfect for beginners and advanced developers looking to add 3D effects to their web projects! 🎨💡
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
----
-## Watch the full tutorial on YouTub
-<a href="https://www.youtube.com/watch?v=vXHDfrFMoog&list=PL67b5wgxuUtAzzyFFMZ8W3w_XV4jJfH-8">
-  <img src="./youtube.png" alt="youtube"/>
-</a>
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
