@@ -32,7 +32,7 @@ const Header = () => {
           PROJECTS
         </a>
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
-          SKILLS
+          RECOMMENDATIONS
         </a>
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
           CONTACT
@@ -65,13 +65,13 @@ const Header = () => {
       >
         <nav className="flex flex-col gap-6 items-center">
           <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
-            COMPANY
+            ABOUT
           </a>
           <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
-            FEATURES
+            PROJECTS
           </a>
           <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
-            RESOURCES
+            RECOMMENDATIONS
           </a>
           <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
             CONTACT

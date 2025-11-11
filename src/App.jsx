@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import HireMe from './components/HireMe';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Projects from './components/Projects';
+import Recommendations from './components/Recommendations';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/" element={<Hero />} />
         </Routes> */}
         <Hero/>
+        <Projects/>
+        <Recommendations/>
         <HireMe/>
       </main>
     </Router>
