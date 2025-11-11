@@ -12,32 +12,42 @@ const Header = () => {
     }
   };
 
+  const handleHireClick = () => {
+    window.open("/#/hire-me", "_blank");
+  };
+
   return (
     <header className="flex justify-between items-center py-4 px-4 lg:px-20">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
-        MCODE
+        HRISHI<span className="text-gray-400">.DEV</span>
       </h1>
+
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex items-center gap-12">
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
-          COMPANY
+          ABOUT
         </a>
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
-          FEATURES
+          PROJECTS
         </a>
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
-          RESOURCES
+          SKILLS
         </a>
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#">
           CONTACT
         </a>
       </nav>
 
-      <button className="hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none
-         font-medium transition-all duration-500 hover:bg-white cursor-pointer z-50">
-        SIGNIN
+      <button className="hidden md:flex items-center gap-2 bg-[#a7a7a7] text-black py-3 px-8 
+        rounded-full border-none font-medium transition-all duration-500 hover:bg-white 
+        cursor-pointer z-50"
+        onClick={handleHireClick}
+        >
+          <span>HIRE ME</span>
+          <i class='bx bx-briefcase text-xl'></i>
       </button>
+
 
       {/* Mobile Menu Button */}
       <button
