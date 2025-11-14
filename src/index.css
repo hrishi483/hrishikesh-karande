@@ -17,6 +17,16 @@
   }
 
 }
+.nav-link {
+  @apply text-base tracking-wide transition-colors hover:text-gray-300;
+}
 
+.mobile-nav {
+  @apply text-white tracking-wider hover:text-gray-300 text-lg;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 }

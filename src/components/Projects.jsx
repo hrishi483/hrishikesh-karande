@@ -1,22 +1,23 @@
 import React from "react";
 
-const projects = [
+const projects = [ 
   {
     id: 1,
     title: "Legal Agents",
-    video: "https://drive.google.com/file/d/1c0ndCB1odtt3mfpZECx5zRjJ6T1YMvA-/view?usp=sharing", 
-    description: "This project is a web-based simulation of the TV show SUITS, where each character is represented as an autonomous AI agent. Each agent has both long-term memory (LTM) and short-term memory (STM), allowing them to stay true to their personalities and evolve over time — just like in the series.",
+    video: "https://drive.google.com/file/d/1c0ndCB1odtt3mfpZECx5zRjJ6T1YMvA-/preview",
+    description: "This project is a web-based simulation of the TV show SUITS where each character is represented as an autonomous AI agent. Each agent has both long-term memory (LTM) and short-term memory (STM), allowing them to stay true to their personalities and evolve over time — just like in the series.",
     tech: ["Langchain", "FAISS", "python", "Optik"],
   },
   {
     id: 2,
     title: "AI-Powered Analyst Agent",
-    video: "https://drive.google.com/file/d/1QZFmx-sLY_CUOZDczqzPc6Ws_RDVdpc7/view?usp=sharing",
-    description:
-      " Analyst Agent, a multi-agent system using LangGraph, designed to structurally think and act like a data science team. Once provided with an input dataset and its metadata, the system organizes the workflow",
+    image: "https://drive.google.com/thumbnail?id=1QZFmx-sLY_CUOZDczqzPc6Ws_RDVdpc7&sz=w1000",
+    description: "This project is a web-based simulation of the TV show SUITS, where each character is represented as an autonomous AI agent. Each agent has both long-term memory (LTM) and short-term memory (STM), allowing them to stay true to their personalities and evolve over time — just like in the series.",
     tech: ["Python", "Langgraph", "Langserver", "google cloud models"],
   },
 ];
+
+
 
 const Projects = () => {
   return (
@@ -35,19 +36,40 @@ const Projects = () => {
               index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
             } items-center gap-10 lg:gap-16`}
           >
-            {/* Video */}
-            <div className="w-full lg:w-1/2">
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(233,155,99,0.2)]">
-                <iframe
-                  src={project.video}
-                  title={project.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-            </div>
+            {/* Project Media */}
+          <div className="w-180 h-100 mx-auto relative rounded-xl overflow-hidden bg-black flex items-center justify-center">
+
+            {/* Video for index 0 */}
+             {project.video && (
+              <iframe
+                src={project.video}
+                allow="autoplay"
+                allowFullScreen
+                className="w-full h-full border-0"
+              />
+            )}
+
+
+            {/* Image for index 1 */}
+            {project.image && (
+               <a
+                  href="https://drive.google.com/file/d/1QZFmx-sLY_CUOZDczqzPc6Ws_RDVdpc7/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="w-40 h-40 mx-auto overflow-hidden rounded-xl bg-black flex items-center justify-center cursor-pointer">
+                    <img
+                      src="https://drive.google.com/thumbnail?id=1QZFmx-sLY_CUOZDczqzPc6Ws_RDVdpc7&sz=w1000"
+                      alt="Project Preview"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </a>
+            )}
+
+          </div>
+
 
             {/* Description */}
             <div className="w-full lg:w-1/2 space-y-4">

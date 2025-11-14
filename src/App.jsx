@@ -9,6 +9,7 @@ import Recommendations from './components/Recommendations';
 function App() {
   return (
     <Router>
+      <Header />
       <main className="relative overflow-x-hidden">
         {/* Background gradient image */}
         <img
@@ -20,18 +21,14 @@ function App() {
           className="h-0 w-[40rem] absolute top-[20%] right-[-5%]
           shadow-[0_0_900px_20px_#e99b63] -rotate-[30deg] z-0"
         ></div>
-
-        {/* Header stays visible across all pages */}
-        <Header />
-
-        {/* Define routes */}
-        {/* <Routes>
-          <Route path="/" element={<Hero />} />
-        </Routes> */}
-        <Hero/>
+        <section id="about" className='pt-24'>
+          <Hero/>
+        </section>
         <Projects/>
         <Recommendations/>
-        <HireMe/>
+        <section id="HireMe" className="pt-24">
+          <HireMe />
+        </section>
       </main>
     </Router>
   );

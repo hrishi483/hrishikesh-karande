@@ -6,16 +6,16 @@ const recommendations = [
     name: "Prof. Surya Pratap Singh ",
     role: "Assistant Professor at IIT dharwad",
     text: "recommendation",
-    img: "https://via.placeholder.com/80",
-    proof: "https://drive.google.com/file/d/your-proof-id/view",
+    img: `${import.meta.env.BASE_URL}SURYA_PRATAP.jpg`,
+    proof: "https://www.linkedin.com/in/surya-pratap-singh-8b7588140/",
   },
   {
     id: 2,
     name: "Prof. Anand Konjengbam",
     role: "Assistant Professor at IIT dharwad",
     text: "recommendation",
-    img: "https://via.placeholder.com/80",
-    proof: "https://drive.google.com/file/d/your-proof-id/view",
+    img: `${import.meta.env.BASE_URL}ANAND_KONJENBAM.jpg`,
+    proof: "https://www.linkedin.com/in/anand-konjengbam-9b691925/",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const recommendations = [
     role: "Chief Operating Officer at AI Adventures",
     text: "I supervised Hrishikesh Karande during his Machine Learning Internship, where he worked on LLM and OCR projects. He quickly grasped complex concepts, showed strong technical skills, and consistently delivered high-quality work.",
     img: `${import.meta.env.BASE_URL}VIVEK_DESHPANDE.jpg`,
-    proof: "https://drive.google.com/file/d/your-proof-id/view",
+    proof: "https://www.linkedin.com/in/vivek-deshpande-6774a838/",
   },
   {
     id: 4,
@@ -31,15 +31,15 @@ const recommendations = [
     role: "Project Manager, Freelance Client",
     text: "I had the opportunity to work with Hrishikesh Karande on a short-term AI project, and his contribution was immediately impactful. What stood out most was his exceptional brainstorming capacity—he consistently brought fresh, innovative ideas to the table that elevated our approach and helped clarify our strategic direction. His technical knowledge combined with a creative mindset made him a valuable collaborator. I would gladly work with him again and recommend him to teams seeking a forward-thinking AI developer.",
     img: `${import.meta.env.BASE_URL}RAM_KARNATI.jpg`,
-    proof: "https://drive.google.com/file/d/your-proof-id/view",
+    proof: "https://www.linkedin.com/in/rkarnati/",
   },
   {
     id: 5,
-    name: "Dr. A. Mehta",
+    name: "JIRO KARLO",
     role: "Research Advisor, IIT Dharwad",
     text: "Hrishikesh’s persistence and problem-solving mindset are commendable. His contributions in backend optimization were invaluable.",
-    img: "https://via.placeholder.com/80",
-    proof: "https://drive.google.com/file/d/your-proof-id/view",
+    img: `${import.meta.env.BASE_URL}JIRO_KARLO.jpg`,
+    proof: "https://www.linkedin.com/in/jiro-karlo-98b976130/",
   },
 ];
 
@@ -50,7 +50,7 @@ const Recommendations = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % recommendations.length);
-    }, 4000); // auto change every 4 sec
+    }, 7000); // auto change every 4 sec
     return () => clearInterval(interval);
   }, []);
 
@@ -99,7 +99,9 @@ const Recommendations = () => {
               rel="noopener noreferrer"
               className="mt-4 inline-block text-sm text-[#e99b63] hover:underline"
             >
-              🔗 View Verified Letter
+              {/* 🔗 View Verified Letter  */}
+              🔗 View Profile
+
             </a>
           </div>
         ))}
