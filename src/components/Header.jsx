@@ -52,6 +52,23 @@ const Header = () => {
           <a href="#about" className="mobile-nav" onClick={toggleMobileMenu}>ABOUT</a>
           <a href="#projects" className="mobile-nav" onClick={toggleMobileMenu}>PROJECTS</a>
           <a href="#recommendations" className="mobile-nav" onClick={toggleMobileMenu}>RECOMMENDATIONS</a>
+          <a
+            href="#HireMe"
+            onClick={toggleMobileMenu}
+            className="
+              w-full text-center 
+              bg-gradient-to-r from-orange-400 to-yellow-300 
+              text-black font-semibold py-3 px-8 rounded-full
+              shadow-[0_0_15px_rgba(255,200,100,0.6)]
+              animate-pulse
+              transition-all duration-300 
+              hover:shadow-[0_0_25px_rgba(255,200,100,0.9)]
+              hover:scale-105
+            "
+          >
+            HIRE ME
+          </a>
+
         </nav>
       </div>
     </header>
