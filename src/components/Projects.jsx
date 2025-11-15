@@ -8,13 +8,15 @@ const projects = [
     description: "This project is a web-based simulation of the TV show SUITS where each character is represented as an autonomous AI agent. Each agent has both long-term memory (LTM) and short-term memory (STM), allowing them to stay true to their personalities and evolve over time — just like in the series.",
     tech: ["Langchain", "FAISS", "python", "Optik"],
   },
-  {
-    id: 2,
-    title: "AI-Powered Analyst Agent",
-    image: "https://drive.google.com/thumbnail?id=1QZFmx-sLY_CUOZDczqzPc6Ws_RDVdpc7&sz=w1000",
-    description: "This project is a web-based simulation of the TV show SUITS, where each character is represented as an autonomous AI agent. Each agent has both long-term memory (LTM) and short-term memory (STM), allowing them to stay true to their personalities and evolve over time — just like in the series.",
-    tech: ["Python", "Langgraph", "Langserver", "google cloud models"],
-  },
+{
+  id: 2,
+  title: "ML-Model for Plant Disease Detection",
+  video: "https://drive.google.com/file/d/1sXImvKznbd_TJZLwrNTUGJGMvFd3S9NY/preview",
+  description:
+    "A deep-learning based plant disease classification system built using a Convolutional Neural Network (CNN) trained in PyTorch. The model analyzes leaf images and predicts the presence of diseases with high accuracy. The project includes dataset preprocessing, augmentation, model training, evaluation, and deployment as an interactive web interface for real-time predictions.",
+  tech: ["PyTorch", "CNN", "Python", "NumPy", "Pandas", "Matplotlib", "Torchvision"],
+}
+
 ];
 
 

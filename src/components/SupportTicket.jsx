@@ -9,7 +9,7 @@ const SupportTicket = () => {
         {/* Floating Support Button */}
         <a
             onClick={() => setShowSupport(true)}
-            className="fixed bottom-26 right-6 bg-cyan-500 text-white w-14 h-14 rounded-full
+            className="fixed bottom-26 z-50 right-6 bg-cyan-500 text-white w-14 h-14 rounded-full
                     flex items-center justify-center text-3xl shadow-xl cursor-pointer
                     hover:scale-110 transition-all duration-300"
         >
