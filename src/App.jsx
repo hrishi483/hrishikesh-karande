@@ -5,6 +5,7 @@ import HireMe from './components/HireMe';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Projects from './components/Projects';
 import Recommendations from './components/Recommendations';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <section id="HireMe" className="pt-24">
           <HireMe />
         </section>
+        <Footer/>
       </main>
     </Router>
   );

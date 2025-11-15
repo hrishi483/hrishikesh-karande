@@ -2,6 +2,7 @@ import 'boxicons/css/boxicons.min.css';
 import Spline from '@splinetool/react-spline';
 import { Link } from 'react-router-dom';
 import WhatsApp from './WhatsApp';
+import SupportTicket from './SupportTicket';
 const Hero = () => {
   return (
     <main
@@ -90,6 +91,7 @@ const Hero = () => {
         </div>
       </div>
       <div>
+        <SupportTicket/>
         <WhatsApp/>
       </div>
     </main>
