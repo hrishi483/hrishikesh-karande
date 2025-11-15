@@ -1,7 +1,7 @@
 import 'boxicons/css/boxicons.min.css';
 import Spline from '@splinetool/react-spline';
 import { Link } from 'react-router-dom';
-
+import WhatsApp from './WhatsApp';
 const Hero = () => {
   return (
     <main
@@ -88,6 +88,9 @@ const Hero = () => {
             <Spline scene='https://prod.spline.design/FhQYSkV5hmMJcPNt/scene.splinecode' />
           </div>
         </div>
+      </div>
+      <div>
+        <WhatsApp/>
       </div>
     </main>
   );
