@@ -1,15 +1,59 @@
-import React from "react";
-
+import React, { useState } from "react";
+import MermaidDiagram from "./MermaidDiagram";
 const projects = [ 
   {
     id: 1,
+    title: "Agentic RAG System",
+    type: "mermaid",
+    mermaid: `
+    graph TD;
+      __start__([Start])
+      load_memory
+      retrieve_docs
+      filter_docs
+      check_answerability
+      detect_ambiguity
+      focused_retrieval
+      rerank_docs
+      generate_answer
+      generate_clarification
+      no_answer
+      save_memory
+      __end__([End])
+
+      __start__ --> load_memory --> retrieve_docs --> filter_docs
+
+      filter_docs -->|has_context| check_answerability
+      filter_docs -->|no_context| no_answer
+
+      check_answerability -->|answerable| detect_ambiguity
+      check_answerability -->|not_answerable| no_answer
+
+      detect_ambiguity -->|ambiguous| generate_clarification
+      detect_ambiguity -->|clear| rerank_docs
+      detect_ambiguity --> focused_retrieval
+
+      focused_retrieval --> rerank_docs --> generate_answer
+
+      generate_answer --> save_memory
+      generate_clarification --> save_memory
+      no_answer --> save_memory
+
+      save_memory --> __end__
+    `,
+    description:
+      "Designed an agentic RAG system with ambiguity detection, fallback retrieval, and clarification loops to improve answer reliability. The system dynamically adapts retrieval strategy based on query confidence and context availability.",
+    tech: ["LangGraph", "RAG", "LLMs", "FastAPI"],
+  },
+  {
+    id: 2,
     title: "Legal Agents",
     video: "https://drive.google.com/file/d/1c0ndCB1odtt3mfpZECx5zRjJ6T1YMvA-/preview",
     description: "This project is a web-based simulation of the TV show SUITS where each character is represented as an autonomous AI agent. Each agent has both long-term memory (LTM) and short-term memory (STM), allowing them to stay true to their personalities and evolve over time — just like in the series.",
     tech: ["Langchain", "FAISS", "python", "Optik"],
   },
 {
-  id: 2,
+  id: 3,
   title: "ML-Model for Plant Disease Detection",
   video: "https://drive.google.com/file/d/1sXImvKznbd_TJZLwrNTUGJGMvFd3S9NY/preview",
   description:
@@ -22,6 +66,7 @@ const projects = [
 
 
 const Projects = () => {
+  const [fullscreenChart, setFullscreenChart] = useState(null);
   return (
     <section
       id="projects"
@@ -39,7 +84,25 @@ const Projects = () => {
             } items-center gap-10 lg:gap-16`}
           >
             {/* Project Media */}
-          <div className="w-180 h-100 mx-auto relative rounded-xl overflow-hidden bg-black flex items-center justify-center">
+            <div className="w-full lg:w-[600px] h-[350px] relative rounded-xl overflow-hidden bg-black flex items-center justify-center">
+              {project.type === "mermaid" && (
+                  <div className="flex items-start gap-2 w-full h-full overflow-auto">
+
+                    {/* Diagram */}
+                    <div className="flex-1 overflow-auto">
+                      <MermaidDiagram chart={project.mermaid} />
+                    </div>
+
+                    {/* Expand Button */}
+                    <button
+                      onClick={() => setFullscreenChart(project.mermaid)}
+                      className="bg-[#333] hover:bg-[#444] text-white px-3 py-2 text-sm rounded-md h-fit"
+                    >
+                      ⛶
+                    </button>
+
+                  </div>
+                )}
 
             {/* Video for index 0 */}
              {project.video && (
@@ -94,6 +157,28 @@ const Projects = () => {
             </div>
           </div>
         ))}
+        {fullscreenChart && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col">
+
+          {/* Close Button */}
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setFullscreenChart(null)}
+              className="text-white text-xl bg-[#333] px-3 py-1 rounded-md"
+            >
+              ✕
+            </button>
+          </div>
+
+          {/* Fullscreen Diagram */}
+          <div className="flex-1 overflow-auto p-6">
+            <div className="min-w-[900px]">
+              <MermaidDiagram chart={fullscreenChart} />
+            </div>
+          </div>
+
+        </div>
+      )}
       </div>
     </section>
   );
