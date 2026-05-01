@@ -57,7 +57,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/133qygbIjlNOj_9DW4T4Qj254mL6Uv5jd/view?usp=drive_link" // 👈 replace with your actual resume link
+            href="https://drive.google.com/file/d/1tzyzEWv7vvO8oS7-waVkyWaDUZVC2o8Y/view?usp=sharing" // 👈 replace with your actual resume link
             target="_blank"
             rel="noopener noreferrer"
             className="border border-[#e99b63] py-2 sm:py-3 px-8 sm:px-10 rounded-full 
